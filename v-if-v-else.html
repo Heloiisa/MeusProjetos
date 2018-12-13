@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue JS</title>
+	
+</head>
+<body>
+	<div id="Nome">
+		<h1>{{titulo}}</h1>
+		<div v-if="usuario.nome == 'Ana'">
+		id: {{ usuario.id}},<br>
+		Nome: {{ usuario.nome }},<br>
+		Profissão: {{usuario.profissao }}
+</div>
+<div v-else>Nenhum usuario encontrado</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<script type="text/javascript">
+	var nome = new Vue({
+		el:"#Nome",
+		data:{
+      titulo: "Testando vue.js",
+			usuario:{
+				id: 3,
+			profissao: "ator",
+				nome: 'Ana'
+
+
+			}
+		}
+	});
+</script>
+
+
+</body>
+</html>
+
+
